@@ -17,6 +17,8 @@ class App {
         for (var i = 1; i <= word.length(); i++) {
             if (!symbolsList.contains(word.substring(i - 1, i))) {
                 return false;
+            } else {
+                symbolsList.remove(word.substring(i - 1, i));
             }
         }
         return true;
