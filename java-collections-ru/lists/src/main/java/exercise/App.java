@@ -8,18 +8,18 @@ import java.util.ArrayList;
 class App {
     public static boolean scrabble(String symbols, String word) {
         word = word.toLowerCase();
-        List<String> wordList = new ArrayList<>();
-
-        for (var i = 1; i < word.length(); i++) {
-            wordList.add(word.substring(i - 1, i));
-        }
+        List<String> symbolsList = new ArrayList<>();
 
         for (var i = 1; i < symbols.length(); i++) {
-            if (!wordList.contains(symbols.substring(i - 1, i))) {
+            symbolsList.add(symbols.substring(i - 1, i));
+        }
+
+        for (var i = 1; i < word.length(); i++) {
+            if (!symbolsList.contains(word.substring(i - 1, i))) {
                 return false;
             }
         }
-        return false;
+        return true;
     }
 }
 // END
