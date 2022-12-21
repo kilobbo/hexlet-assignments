@@ -14,7 +14,7 @@ class App {
             symbolsList.add(symbols.substring(i - 1, i));
         }
 
-        for (var i = 1; i < symbols.length(); i++) {
+        for (var i = 1; i < word.length(); i++) {
             if (symbolsList.indexOf(word.substring(i - 1, i)) == -1) {
                 return false;
             }
