@@ -15,11 +15,11 @@ class App {
         }
 
         for (var i = 1; i < symbols.length(); i++) {
-            if (!symbolsList.contains(word.substring(i - 1, i))) {
-                return false;
+            if (symbolsList.contains(word.substring(i - 1, i))) {
+                return true;
             }
         }
-        return true;
+        return false;
     }
 }
 // END
