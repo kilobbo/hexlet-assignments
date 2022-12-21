@@ -14,7 +14,7 @@ class App {
             symbolsList.add(symbols.substring(i - 1, i));
         }
 
-        for (var i = 0; i < symbols.length(); i++) {
+        for (var i = 1; i < symbols.length(); i++) {
             if (!symbolsList.contains(word.substring(i - 1, i))) {
                 return false;
             }
