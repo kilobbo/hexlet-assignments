@@ -31,10 +31,10 @@ class App {
                 mapToString.append("}");
                 return mapToString.toString();
             } else {
-                mapToString.append("\n  ").append(word.getKey()).append(": ").append(word.getValue());
+                mapToString.append("\n  ").append(word.getKey()).append(": ").append(word.getValue()).append("\n");
             }
         }
-        mapToString.append("\n}");
+        mapToString.append("}");
         return mapToString.toString();
     }
 }
