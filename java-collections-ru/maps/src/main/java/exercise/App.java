@@ -26,14 +26,14 @@ class App {
     public static String toString(Map<String, Integer> dictionary) {
         StringBuilder mapToString = new StringBuilder("{");
 
-        for (Map.Entry<String, Integer> word: dictionary.entrySet()) {
-            if (dictionary.isEmpty()) {
-                String emptyMap = "{}";
-                return emptyMap;
-            } else {
-                mapToString.append("\n  ").append(word.getKey()).append(": ").append(word.getValue());
-            }
+        if (dictionary.isEmpty()) {
+            return "{}";
         }
+
+        for (Map.Entry<String, Integer> word: dictionary.entrySet()) {
+                mapToString.append("\n  ").append(word.getKey()).append(": ").append(word.getValue());
+        }
+
         mapToString.append("\n}");
         return mapToString.toString();
     }
