@@ -15,7 +15,7 @@ class App {
             if (!wordsAndCount.containsKey(word)) {
                 wordsAndCount.put(word, count);
             } else {
-                wordsAndCount.put(word, count + 1);
+                wordsAndCount.put(word, wordsAndCount.get(word) + 1);
             }
         }
         return wordsAndCount;
