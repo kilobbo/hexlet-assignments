@@ -12,7 +12,7 @@ class App {
         String[] words = sentence.split(" ");
 
         for (String word : words) {
-            if (wordsAndCount.containsKey(null)) {
+            if (words.length = 0) {
                 return wordsAndCount;
             } else if (!wordsAndCount.containsKey(word)) {
                 wordsAndCount.put(word, count);
@@ -27,7 +27,7 @@ class App {
         StringBuilder mapToString = new StringBuilder("{");
 
         for (Map.Entry<String, Integer> word: dictionary.entrySet()) {
-            if (dictionary.containsKey(null)) {
+            if (!dictionary.containsValue(1)) {
                 mapToString.append("}");
                 return mapToString.toString();
             } else {
