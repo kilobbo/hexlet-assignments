@@ -12,7 +12,9 @@ class App {
         String[] words = sentence.split(" ");
 
         for (String word : words) {
-            if (!wordsAndCount.containsKey(word)) {
+            if (wordsAndCount == {}) {
+                return wordsAndCount;
+            } else if (!wordsAndCount.containsKey(word)) {
                 wordsAndCount.put(word, count);
             } else {
                 wordsAndCount.put(word, wordsAndCount.get(word) + 1);
@@ -22,12 +24,16 @@ class App {
     }
 
     public static String toString(Map<String, Integer> dictionary) {
-        StringBuilder mapToString = new StringBuilder("{\n");
+        StringBuilder mapToString = new StringBuilder("{");
 
         for (Map.Entry<String, Integer> word: dictionary.entrySet()) {
-            mapToString.append("  ").append(word.getKey()).append(": ").append(word.getValue()).append("\n");
+            if (dictionary == {}) {
+                return mapToString.append("}");
+            } else {
+                mapToString.append("\n  ").append(word.getKey()).append(": ").append(word.getValue());
+            }
         }
-        mapToString.append("}");
+        mapToString.append("\n}");
         return mapToString.toString();
     }
 }
