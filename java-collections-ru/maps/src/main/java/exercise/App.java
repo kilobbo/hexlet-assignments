@@ -12,7 +12,7 @@ class App {
         String[] words = sentence.split(" ");
 
         for (String word : words) {
-            if (words.length = 0) {
+            if (words.length == 1) {
                 return wordsAndCount;
             } else if (!wordsAndCount.containsKey(word)) {
                 wordsAndCount.put(word, count);
