@@ -28,8 +28,8 @@ class App {
 
         for (Map.Entry<String, Integer> word: dictionary.entrySet()) {
             if (dictionary.isEmpty()) {
-                mapToString.append("}");
-                return mapToString.toString();
+                String emptyMap = "{}";
+                return emptyMap;
             } else {
                 mapToString.append("\n  ").append(word.getKey()).append(": ").append(word.getValue());
             }
