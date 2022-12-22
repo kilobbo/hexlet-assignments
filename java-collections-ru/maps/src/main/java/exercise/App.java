@@ -27,8 +27,9 @@ class App {
         StringBuilder mapToString = new StringBuilder("{");
 
         for (Map.Entry<String, Integer> word: dictionary.entrySet()) {
-            if (dictionary == {}) {
-                return mapToString.append("}");
+            if (dictionary.containsKey(null)) {
+                mapToString.append("}");
+                return mapToString.toString();
             } else {
                 mapToString.append("\n  ").append(word.getKey()).append(": ").append(word.getValue());
             }
