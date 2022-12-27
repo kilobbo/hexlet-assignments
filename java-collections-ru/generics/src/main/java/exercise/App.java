@@ -17,6 +17,7 @@ class App {
                 if (book.containsValue(criteria.getValue())) {
                     check = true;
                 } else {
+                    check = false;
                     break;
                 }
             }
