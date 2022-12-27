@@ -12,12 +12,18 @@ class App {
         List<Map<String, String>> selectedBooks = new ArrayList<>();
 
         for (Map<String, String> book : books) {
+            boolean check = false;
             for (Map.Entry<String, String> criteria : where.entrySet()) {
-                if (book.containsValue(criteria.getValue())) {
-                    selectedBooks.add(book);
-                } else {
-                    break;
+                if (book.containsKey(criteria.getKey())) {
+                    if (book.containsValue(criteria.getValue())) {
+                        check = true;
+                    } else {
+                        break;
+                    }
                 }
+            if (check) {
+                selectedBooks.add(book);
+            }
             }
         }
         return selectedBooks;
