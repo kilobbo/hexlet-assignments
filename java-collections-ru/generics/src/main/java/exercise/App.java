@@ -14,12 +14,10 @@ class App {
         for (Map<String, String> book : books) {
             boolean check = false;
             for (Map.Entry<String, String> criteria : where.entrySet()) {
-                if (book.containsKey(criteria.getKey())) {
-                    if (book.containsValue(criteria.getValue())) {
-                        check = true;
-                    } else {
-                        break;
-                    }
+                if (book.containsValue(criteria.getValue())) {
+                    check = true;
+                } else {
+                    break;
                 }
             }
             if (check) {
