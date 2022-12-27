@@ -21,9 +21,9 @@ class App {
                         break;
                     }
                 }
+            }
             if (check) {
                 selectedBooks.add(book);
-            }
             }
         }
         return selectedBooks;
