@@ -6,10 +6,12 @@ import java.util.Arrays;
 // BEGIN
 public class App {
     public static long getCountOfFreeEmails(List<String> emails) {
-        long count = emails.stream()
-                .filter(name -> name.endsWith("@gmail.com") || name.endsWith("@yandex.ru") || name.endsWith("@hotmail.com"))
+        List<String> freeDomains = Arrays.asList("@gmail.com", "@yandex.ru", "@hotmail.com");
+
+        return emails.stream()
+                .map(email -> email.split("@"))
+                .filter(freeDomains::contains)
                 .count();
-        return count;
     }
 }
 // END
